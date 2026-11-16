@@ -1,0 +1,105 @@
+{
+  "selection": "val recall@50 (screening), early stopping on val recall@50 (full run)",
+  "screening": [
+    {
+      "override": {
+        "logq_correction": true,
+        "train_since_days": null
+      },
+      "best_val_recall@50": 0.16425518079790177,
+      "train_seconds": 46.0
+    },
+    {
+      "override": {
+        "logq_correction": false,
+        "train_since_days": null
+      },
+      "best_val_recall@50": 0.037806703259061075,
+      "train_seconds": 37.8
+    },
+    {
+      "override": {
+        "logq_correction": true,
+        "train_since_days": 1095
+      },
+      "best_val_recall@50": 0.1818327859093473,
+      "train_seconds": 29.8
+    },
+    {
+      "override": {
+        "logq_correction": false,
+        "train_since_days": 1095
+      },
+      "best_val_recall@50": 0.04678893106169981,
+      "train_seconds": 31.2
+    },
+    {
+      "override": {
+        "logq_correction": true,
+        "train_since_days": 365
+      },
+      "best_val_recall@50": 0.20076778555020305,
+      "train_seconds": 16.4
+    }
+  ],
+  "chosen": {
+    "logq_correction": true,
+    "train_since_days": 365
+  },
+  "full_run": {
+    "seed": 0,
+    "epochs_run": 5,
+    "best_epoch": 3,
+    "train_seconds": 51.7,
+    "train_examples_available": 761501,
+    "examples_per_epoch": 757760,
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 9.374696612358093,
+        "seconds": 10.7,
+        "val_recall@50": 0.17754217324095484,
+        "val_recall@10": 0.05993265006063874
+      },
+      {
+        "epoch": 2,
+        "loss": 7.385194659233093,
+        "seconds": 15.5,
+        "val_recall@50": 0.19966495027107498,
+        "val_recall@10": 0.07204771080439862
+      },
+      {
+        "epoch": 3,
+        "loss": 7.116719126701355,
+        "seconds": 9.3,
+        "val_recall@50": 0.2020266086788113,
+        "val_recall@10": 0.07335572801444379
+      },
+      {
+        "epoch": 4,
+        "loss": 6.941312789916992,
+        "seconds": 7.8,
+        "val_recall@50": 0.18612611902760948,
+        "val_recall@10": 0.06588517028433848
+      },
+      {
+        "epoch": 5,
+        "loss": 6.799492835998535,
+        "seconds": 8.4,
+        "val_recall@50": 0.18800098251403843,
+        "val_recall@10": 0.06744036893093651
+      }
+    ],
+    "device": "mps"
+  },
+  "val": {
+    "recall@10": 0.07335572801444379,
+    "ndcg@10": 0.11704836686068405,
+    "recall@50": 0.2020266086788113,
+    "ndcg@50": 0.14409016006927186,
+    "mrr": 0.24116828106884072,
+    "coverage@10": 0.09227082085080887,
+    "coverage@50": 0.18955567468701712,
+    "n_users": 5233
+  }
+}

@@ -1,0 +1,61 @@
+[18:07:11] command tune-als torch 2.15.0 python 3.12.12
+[18:07:11] command tune-tt torch 2.15.0 python 3.12.12
+[18:08:56] screen {'logq_correction': True, 'train_since_days': None} {'epoch': 1, 'loss': 9.3476881980896, 'seconds': 18.7, 'val_recall@50': 0.1296993735580655, 'val_recall@10': 0.03830568339624392}
+[18:09:10] screen {'logq_correction': True, 'train_since_days': None} {'epoch': 2, 'loss': 7.200956916809082, 'seconds': 12.5, 'val_recall@50': 0.1589251475767803, 'val_recall@10': 0.04928527470471054}
+[18:09:25] screen {'logq_correction': True, 'train_since_days': None} {'epoch': 3, 'loss': 7.056512641906738, 'seconds': 14.8, 'val_recall@50': 0.16425518079790177, 'val_recall@10': 0.05143277087122706}
+[18:09:44] screen {'logq_correction': False, 'train_since_days': None} {'epoch': 1, 'loss': 8.184278583526611, 'seconds': 13.7, 'val_recall@50': 0.021051665249546412, 'val_recall@10': 0.005684163637727146}
+[18:09:56] screen {'logq_correction': False, 'train_since_days': None} {'epoch': 2, 'loss': 7.099390029907227, 'seconds': 10.6, 'val_recall@50': 0.03560888936399631, 'val_recall@10': 0.010134741708494722}
+[18:10:11] screen {'logq_correction': False, 'train_since_days': None} {'epoch': 3, 'loss': 6.990565967559815, 'seconds': 13.6, 'val_recall@50': 0.037806703259061075, 'val_recall@10': 0.011019703096269425}
+[18:10:26] screen {'logq_correction': True, 'train_since_days': 1095} {'epoch': 1, 'loss': 9.253406524658203, 'seconds': 10.1, 'val_recall@50': 0.15921719815357852, 'val_recall@10': 0.05073653704970649}
+[18:10:37] screen {'logq_correction': True, 'train_since_days': 1095} {'epoch': 2, 'loss': 7.341729831695557, 'seconds': 9.7, 'val_recall@50': 0.1767503790075654, 'val_recall@10': 0.058733986048290894}
+[18:10:48] screen {'logq_correction': True, 'train_since_days': 1095} {'epoch': 3, 'loss': 7.1660301208496096, 'seconds': 10.0, 'val_recall@50': 0.1818327859093473, 'val_recall@10': 0.06179280667869284}
+[18:11:03] screen {'logq_correction': False, 'train_since_days': 1095} {'epoch': 1, 'loss': 8.217363166809083, 'seconds': 10.4, 'val_recall@50': 0.027858046224395985, 'val_recall@10': 0.00700192014737861}
+[18:11:16] screen {'logq_correction': False, 'train_since_days': 1095} {'epoch': 2, 'loss': 7.265085601806641, 'seconds': 12.0, 'val_recall@50': 0.044015707620215526, 'val_recall@10': 0.013828425618516611}
+[18:11:26] screen {'logq_correction': False, 'train_since_days': 1095} {'epoch': 3, 'loss': 7.096311855316162, 'seconds': 8.8, 'val_recall@50': 0.04678893106169981, 'val_recall@10': 0.015216058135303955}
+[18:11:35] screen {'logq_correction': True, 'train_since_days': 365} {'epoch': 1, 'loss': 9.374728202819824, 'seconds': 6.3, 'val_recall@50': 0.17838553443798563, 'val_recall@10': 0.05995617595553365}
+[18:11:40] screen {'logq_correction': True, 'train_since_days': 365} {'epoch': 2, 'loss': 7.385994076728821, 'seconds': 4.7, 'val_recall@50': 0.20076778555020305, 'val_recall@10': 0.07193055985603622}
+[18:11:47] screen {'logq_correction': True, 'train_since_days': 365} {'epoch': 3, 'loss': 7.115142822265625, 'seconds': 5.4, 'val_recall@50': 0.1941285904355993, 'val_recall@10': 0.07115497608447555}
+[18:11:47] two-tower screening chose {'logq_correction': True, 'train_since_days': 365}
+[18:12:00] tt-val {'epoch': 1, 'loss': 9.374696612358093, 'seconds': 10.7, 'val_recall@50': 0.17754217324095484, 'val_recall@10': 0.05993265006063874}
+[18:12:17] tt-val {'epoch': 2, 'loss': 7.385194659233093, 'seconds': 15.5, 'val_recall@50': 0.19966495027107498, 'val_recall@10': 0.07204771080439862}
+[18:12:27] tt-val {'epoch': 3, 'loss': 7.116719126701355, 'seconds': 9.3, 'val_recall@50': 0.2020266086788113, 'val_recall@10': 0.07335572801444379}
+[18:12:35] tt-val {'epoch': 4, 'loss': 6.941312789916992, 'seconds': 7.8, 'val_recall@50': 0.18612611902760948, 'val_recall@10': 0.06588517028433848}
+[18:12:45] tt-val {'epoch': 5, 'loss': 6.799492835998535, 'seconds': 8.4, 'val_recall@50': 0.18800098251403843, 'val_recall@10': 0.06744036893093651}
+[18:12:46] command tune-tt done in 335s wall
+[18:13:58] als {'factors': 128, 'regularization': 0.05, 'alpha': 5.0, 'iterations': 15} fit 339s val {'recall@10': 0.053650999656274456, 'ndcg@10': 0.10321047618818724, 'recall@50': 0.16112009980914918, 'ndcg@50': 0.12063730134021376, 'mrr': 0.22314553517078062, 'coverage@10': 0.05893853867743055, 'coverage@50': 0.09851471098357037, 'n_users': 5233}
+[18:14:10] command final torch 2.15.0 python 3.12.12
+[18:14:28] final popularity {'recall@10': 0.028867202907809655, 'ndcg@10': 0.06013553886137994, 'recall@50': 0.08591782104399201, 'ndcg@50': 0.06814440869981289, 'mrr': 0.13781566218629013, 'coverage@10': 0.008558317614932013, 'coverage@50': 0.02178992708538611, 'n_users': 4606}
+[18:14:28] final popularity_recent {'recall@10': 0.05255904580700902, 'ndcg@10': 0.09240726929318709, 'recall@50': 0.1652896861367442, 'ndcg@50': 0.11549777333451729, 'mrr': 0.19343173759011847, 'coverage@10': 0.006080909884293798, 'coverage@50': 0.016328369133751866, 'n_users': 4606}
+[18:14:28] command final done in 19s wall
+[18:14:33] command final torch 2.15.0 python 3.12.12
+[18:15:00] tt-test seed0 {'epoch': 1, 'loss': 9.479205250740051, 'seconds': 7.7}
+[18:15:06] tt-test seed0 {'epoch': 2, 'loss': 7.442431926727295, 'seconds': 5.2}
+[18:15:13] tt-test seed0 {'epoch': 3, 'loss': 7.118131875991821, 'seconds': 7.0}
+[18:15:15] final two_tower seed 0 {'recall@10': 0.06055163358038112, 'ndcg@10': 0.09990351664126075, 'recall@50': 0.1852703149053929, 'ndcg@50': 0.1279110697277283, 'mrr': 0.21070881557231488, 'coverage@10': 0.07809464823625462, 'coverage@50': 0.16854818276512484, 'n_users': 4606}
+[18:15:21] tt-test seed1 {'epoch': 1, 'loss': 9.455541133880615, 'seconds': 5.0}
+[18:15:29] tt-test seed1 {'epoch': 2, 'loss': 7.436811089515686, 'seconds': 7.5}
+[18:15:34] tt-test seed1 {'epoch': 3, 'loss': 7.108246803283691, 'seconds': 5.8}
+[18:15:36] final two_tower seed 1 {'recall@10': 0.06381247826212755, 'ndcg@10': 0.10672940366852833, 'recall@50': 0.1877845039404702, 'ndcg@50': 0.13265286398093723, 'mrr': 0.2217143890418471, 'coverage@10': 0.07491343149123054, 'coverage@50': 0.15835702823681766, 'n_users': 4606}
+[18:15:44] tt-test seed2 {'epoch': 1, 'loss': 9.1891930103302, 'seconds': 6.5}
+[18:15:52] tt-test seed2 {'epoch': 2, 'loss': 7.420904517173767, 'seconds': 7.1}
+[18:15:58] tt-test seed2 {'epoch': 3, 'loss': 7.133318901062012, 'seconds': 6.6}
+[18:15:59] final two_tower seed 2 {'recall@10': 0.06041482493487147, 'ndcg@10': 0.09991054144923886, 'recall@50': 0.18280061678365161, 'ndcg@50': 0.12718666454630653, 'mrr': 0.21347820949260743, 'coverage@10': 0.08237380704372062, 'coverage@50': 0.17254581796683652, 'n_users': 4606}
+[18:15:59] command final done in 86s wall
+[18:16:09] command ranker torch 2.15.0 python 3.12.12
+[18:16:52] als {'factors': 128, 'regularization': 0.05, 'alpha': 1.0, 'iterations': 15} fit 172s val {'recall@10': 0.048065310210778346, 'ndcg@10': 0.0961992121346424, 'recall@50': 0.14100174687462608, 'ndcg@50': 0.10855652800194115, 'mrr': 0.2137547235120786, 'coverage@10': 0.038503989152029267, 'coverage@50': 0.0692188830374318, 'n_users': 5233}
+[18:17:03] command ranker torch 2.15.0 python 3.12.12
+[18:17:45] command ranker
+[18:18:29] ranker trained in 2.2s, best iteration 49
+[18:21:00] ranker on test seed 0: {'recall@10': 0.08074806076392813, 'ndcg@10': 0.12746153831807633, 'recall@50': 0.20950143248394246, 'ndcg@50': 0.15301814119320173, 'mrr': 0.2535316552459895, 'coverage@10': 0.048534669632048645, 'coverage@50': 0.14518172348751443, 'candidate_recall@100': 0.2773449193293758}
+[18:21:01] ranker on test seed 1: {'recall@10': 0.08098387472927869, 'ndcg@10': 0.12803849408303, 'recall@50': 0.21195256838180726, 'ndcg@50': 0.15510296192265, 'mrr': 0.2570256648336028, 'coverage@10': 0.04464964387263872, 'coverage@50': 0.1355536161707159, 'candidate_recall@100': 0.2812595127610289}
+[18:21:02] ranker on test seed 2: {'recall@10': 0.08016819405354132, 'ndcg@10': 0.125622249838121, 'recall@50': 0.20506077965694203, 'ndcg@50': 0.15027228742069343, 'mrr': 0.25042495736900894, 'coverage@10': 0.052278933588581405, 'coverage@50': 0.1485318543959911, 'candidate_recall@100': 0.2721314088028108}
+[18:21:02] command ranker done in 197s wall
+[18:24:38] als {'factors': 128, 'regularization': 0.05, 'alpha': 20.0, 'iterations': 15} fit 463s val {'recall@10': 0.05060223651419401, 'ndcg@10': 0.0917797786019125, 'recall@50': 0.15927753268546327, 'ndcg@50': 0.11493414953563276, 'mrr': 0.19454243181273528, 'coverage@10': 0.08176973290025544, 'coverage@50': 0.13329759389486298, 'n_users': 5233}
+[18:24:38] command tune-als done in 1046s wall
+[18:25:23] command final torch 2.15.0 python 3.12.12
+[18:33:14] final als {'recall@10': 0.05817683129935311, 'ndcg@10': 0.11242539973792176, 'recall@50': 0.16078368619523925, 'ndcg@50': 0.12602738784624823, 'mrr': 0.23364376993298291, 'coverage@10': 0.05298274260296726, 'coverage@50': 0.08789166971650574, 'n_users': 4606}
+[18:33:14] command final done in 471s wall
+[18:33:37] command report torch 2.15.0 python 3.12.12
+[18:34:38] command report done in 62s wall
+[18:34:54] command report torch 2.15.0 python 3.12.12
+[18:35:48] command report done in 54s wall

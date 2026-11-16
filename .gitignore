@@ -1,0 +1,15 @@
+# Raw and processed MovieLens data (GroupLens licence forbids redistribution)
+/data/
+# Model weights and run artefacts
+/models/
+*.pt
+*.npz
+*.lgb
+results/per_user/
+results/candidates/
+# Python
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/

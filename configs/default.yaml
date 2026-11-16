@@ -1,0 +1,67 @@
+# All paths are relative to the repo root.
+data:
+  url: https://files.grouplens.org/datasets/movielens/ml-25m.zip
+  md5: 6b51fb2759a8657d3bfcbfc42b592ada
+  raw_dir: data/raw
+  processed_dir: data/processed
+  positive_threshold: 4.0      # rating >= 4.0 is an implicit positive
+  val_start: "2018-03-01"      # global time cutoffs (UTC)
+  test_start: "2019-01-01"
+  top_tags: 1000               # tag vocabulary size (tags counted before the cutoff only)
+  tags_per_item: 20
+
+eval:
+  ks: [10, 50]
+  candidates: 100              # top-N kept per user for the ranker and coverage
+  bootstrap_samples: 2000
+  seed: 0
+
+popularity:
+  recent_days: 30              # window for the recent-popularity baseline
+
+als:
+  factors: 128
+  regularization: 0.05
+  alpha: 5.0
+  iterations: 15
+  seed: 0
+  grid:                        # tuned on the val phase by Recall@50
+    - {alpha: 5.0,  regularization: 0.05}
+    - {alpha: 1.0,  regularization: 0.05}
+    - {alpha: 20.0, regularization: 0.05}
+
+two_tower:
+  dim: 64
+  hidden: 256
+  hist_len: 50
+  short_len: 5
+  tag_dim: 32
+  year_dim: 16
+  temperature: 0.05
+  logq_correction: true
+  batch_size: 4096
+  lr: 0.002
+  weight_decay: 0.0
+  warmup_steps: 200
+  max_epochs: 12
+  samples_per_epoch: 3000000   # examples sampled (without replacement) per epoch
+  patience: 2
+  train_since_days: null       # restrict training targets to the last N days before the cutoff
+  seeds: [0, 1, 2]
+  # Short screening runs on the val phase (seed 0). Each entry overrides the base config.
+  screen_epochs: 3
+  screen_samples_per_epoch: 1000000
+  grid:
+    - {logq_correction: true,  train_since_days: null}
+    - {logq_correction: false, train_since_days: null}
+    - {logq_correction: true,  train_since_days: 1095}
+    - {logq_correction: false, train_since_days: 1095}
+    - {logq_correction: true,  train_since_days: 365}
+
+ranker:
+  num_leaves: 63
+  learning_rate: 0.05
+  n_estimators: 500
+  early_stopping_rounds: 30
+  min_child_samples: 50
+  seed: 0
