@@ -37,4 +37,4 @@ target-version = "py311"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "N", "SIM"]
-ignore = ["N803", "N806"]
+ignore = ["N803", "N806", "N812"]  # N812: `import torch.nn.functional as F` is the PyTorch convention
